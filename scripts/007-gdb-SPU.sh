@@ -1,15 +1,15 @@
 #!/bin/sh -e
 # gdb-SPU.sh by Dan Peori (dan.peori@oopo.net)
 
-GDB="gdb-7.4"
+GDB="gdb-7.11"
 
 if [ ! -d ${GDB} ]; then
 
   ## Download the source code.
-  if [ ! -f ${GDB}.tar.bz2 ]; then wget --continue ftp://ftp.gnu.org/gnu/gdb/${GDB}.tar.bz2; fi
+  if [ ! -f ${GDB}.tar.xz ]; then wget --continue ftp://ftp.gnu.org/gnu/gdb/${GDB}.tar.xz; fi
 
   ## Unpack the source code.
-  tar xfvj ${GDB}.tar.bz2
+  tar xfvJ ${GDB}.tar.xz
 
 fi
 
